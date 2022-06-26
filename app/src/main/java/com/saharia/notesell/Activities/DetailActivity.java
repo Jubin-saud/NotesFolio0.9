@@ -120,6 +120,7 @@ public class DetailActivity extends AppCompatActivity {
                         Picasso.get()
                                 .load(url)
                                 .placeholder(R.drawable.pdf)
+                                .resize(110,148)
                                 .into(binding.pdfimg);
 
 

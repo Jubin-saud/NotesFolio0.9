@@ -70,6 +70,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHoldwe>imp
 
         Picasso.get().load(model.getPostImage())
                 .placeholder(R.drawable.pdf)
+                .resize(110,148)
+                
                 .into(holder.binding.postimg);
         holder.binding.titileTv.setText(model.getPostTitile());
         String formateDate=MyApplication.formatTimestamp(timestamp2);

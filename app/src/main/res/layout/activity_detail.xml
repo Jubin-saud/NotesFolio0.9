@@ -8,10 +8,12 @@
     tools:context=".Activities.DetailActivity">
 
 
+
+
     <ImageView
         android:id="@+id/pdfimg"
-        android:layout_width="@dimen/_125mdp"
-        android:layout_height="@dimen/_160mdp"
+        android:layout_width="@dimen/_90mdp"
+        android:layout_height="@dimen/_110mdp"
         android:layout_marginTop="32dp"
         android:background="@drawable/pdf"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,38 +28,39 @@
         android:id="@+id/read_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:background="@color/myblue"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/btnshp"
+        android:textColor="@color/offwhite"
         android:text="Preview"
-        android:textColor="#FFFFFF"
         android:textSize="@dimen/_16font_mdp"
+        app:layout_constraintBottom_toTopOf="@+id/add_btn"
         app:layout_constraintEnd_toEndOf="@+id/desDT"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/desDT"
-        app:layout_constraintTop_toBottomOf="@+id/desDT" />
+        app:layout_constraintStart_toStartOf="@+id/desDT" />
 
     <Button
         android:id="@+id/add_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@color/myblue"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/btnshp"
+        android:textColor="@color/offwhite"
         android:text="Add to fav"
-        android:textColor="#FFFFFF"
         android:textSize="@dimen/_16font_mdp"
+        app:layout_constraintBottom_toTopOf="@+id/price2"
         app:layout_constraintEnd_toEndOf="@+id/read_btn"
-        app:layout_constraintStart_toStartOf="@+id/read_btn"
-        app:layout_constraintTop_toBottomOf="@+id/read_btn" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/read_btn" />
 
     <Button
         android:id="@+id/buy_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:background="@color/myblue"
+        android:background="@drawable/btnshp"
+        android:textColor="@color/offwhite"
         android:text="Buy"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
         android:textSize="@dimen/_16font_mdp"
         app:layout_constraintBottom_toBottomOf="@+id/price2"
         app:layout_constraintEnd_toEndOf="@+id/add_btn"
@@ -79,11 +82,13 @@
         android:id="@+id/price2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:text="Price-"
         android:textSize="@dimen/_16font_mdp"
-        app:layout_constraintStart_toStartOf="@+id/add_btn"
-        app:layout_constraintTop_toBottomOf="@+id/add_btn" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/add_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/add_btn" />
 
     <TextView
         android:id="@+id/desDT"
@@ -94,7 +99,7 @@
         android:layout_marginEnd="24dp"
         android:hint="10. What is Monkey Testing? What are its characteristics? [5 marks] 11. What is a Test Suite? How to demonstrate a Test plan? [5 marks] 12. What is a Test Runner? What are the advantages and disadvantages of using a Test Runner? [8 marks]"
         android:scrollbars="horizontal"
-        android:textSize="@dimen/_18font_mdp"
+        android:textSize="@dimen/_12font_mdp"
         app:layout_constraintEnd_toEndOf="@+id/titileDT"
         app:layout_constraintStart_toStartOf="@+id/titileDT"
         app:layout_constraintTop_toBottomOf="@+id/titileDT" />
@@ -102,12 +107,11 @@
     <TextView
         android:id="@+id/titileDT"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_40mdp"
-
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Book Title"
         android:textAlignment="center"
-        android:textSize="@dimen/_30font_mdp"
+        android:textSize="@dimen/_20font_mdp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/pdfimg"
         app:layout_constraintStart_toStartOf="@+id/pdfimg"
@@ -118,12 +122,14 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:maxLines="1"
         android:text="views"
         android:textSize="@dimen/_13font_mdp"
         app:layout_constraintBottom_toBottomOf="@+id/pdfimg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pdfimg"
         app:layout_constraintTop_toTopOf="@+id/pdfimg"
         app:layout_constraintVertical_bias="1.0" />
 
