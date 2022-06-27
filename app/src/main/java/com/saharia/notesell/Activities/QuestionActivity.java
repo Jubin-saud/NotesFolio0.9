@@ -39,14 +39,17 @@ public class QuestionActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase database;
     FirebaseStorage storage;
-    // ProgressDialog dialog;
+    private ProgressDialog pd2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityQuestionBinding.inflate(getLayoutInflater());
-
         setContentView(binding.getRoot());
+
+        pd2=new ProgressDialog(this);
+        pd2.setTitle("Uploading Your Question");
+        pd2.setCanceledOnTouchOutside(false);
 
        binding.addImage.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -117,7 +120,8 @@ public class QuestionActivity extends AppCompatActivity {
         binding.Postbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               //dialog.show();
+                pd2.setMessage("Please wait");
+                pd2.show();
 
 
                   final StorageReference reference= storage.getReference().child("Qpost")
@@ -142,10 +146,11 @@ public class QuestionActivity extends AppCompatActivity {
                                                      .push().setValue(qmodel).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                  @Override
                                                  public void onSuccess(Void unused) {
-
+                                                     pd2.dismiss();
                                                      Toast.makeText(getApplicationContext(), "Posted Sucessfully", Toast.LENGTH_SHORT).show();
                                                      Intent intent = new Intent(QuestionActivity.this, HomeActivity.class);
                                                      startActivity( intent);
+                                                     finish();
                                                  }
                                              });
 
