@@ -97,8 +97,8 @@
 
     <ImageView
         android:id="@+id/library_image4"
-        android:layout_width="@dimen/_45mdp"
-        android:layout_height="@dimen/_45mdp"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
         android:layout_marginEnd="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/locationPro"
         app:layout_constraintEnd_toEndOf="parent"

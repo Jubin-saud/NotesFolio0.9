@@ -73,7 +73,7 @@ public class PaymentActivity extends AppCompatActivity  implements PaymentResult
 
                 razorpay=addmodel.getPostPrice();
                 binding.productPrice.setText(addmodel.getPostPrice());
-                binding.product.setText(addmodel.getPostTitile());
+                binding.product.setText("Title- " +addmodel.getPostTitile());
                 binding.totalAmt.setText(addmodel.getPostPrice());
             }
 

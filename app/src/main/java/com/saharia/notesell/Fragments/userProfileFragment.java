@@ -141,12 +141,14 @@ public class userProfileFragment extends Fragment {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 User user=snapshot.getValue(User.class);
-                Picasso.get()
-                        .load(user.getProfileImage())
-                        .placeholder(R.drawable.profile)
-                        .error(R.drawable.leaf)
-                        .into(profile);
+
+                  Picasso.get()
+                            .load(user.getProfileImage())
+                            .placeholder(R.drawable.profile)
+                            .error(R.drawable.leaf)
+                            .into(profile);
 
                 name.setText(user.getName());
                 loaction.setText(user.getLocation());

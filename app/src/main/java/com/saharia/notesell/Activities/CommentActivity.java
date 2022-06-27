@@ -116,23 +116,23 @@ public class CommentActivity extends AppCompatActivity {
                        .push()
                        .setValue(comment).addOnSuccessListener(new OnSuccessListener<Void>() {
                    @Override
-                   public void onSuccess(Void unused) {
+                   public void onSuccess( Void unused) {
                               database.getReference()
                                       .child("Qposts")
                                       .child(postID)
-                                      .child("CommentCount")
+                                      .child("commentCount")
                                       .addListenerForSingleValueEvent(new ValueEventListener() {
                                           @Override
                                           public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                              int CommentCount=0;
+                                              int commentCount=0;
                                               if (dataSnapshot.exists()){
-                                                  CommentCount=dataSnapshot.getValue(Integer.class);
+                                                  commentCount=dataSnapshot.getValue(Integer.class);
                                               }
                                               database.getReference()
                                                       .child("Qposts")
                                                       .child(postID)
-                                                      .child("CommentCount")
-                                                      .setValue(CommentCount+1)
+                                                      .child("commentCount")
+                                                      .setValue(commentCount+1)
                                                       .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                           @Override
                                                           public void onSuccess(Void unused) {

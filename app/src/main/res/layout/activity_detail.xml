@@ -8,8 +8,6 @@
     tools:context=".Activities.DetailActivity">
 
 
-
-
     <ImageView
         android:id="@+id/pdfimg"
         android:layout_width="@dimen/_90mdp"
@@ -17,7 +15,6 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/pdf"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -102,7 +99,7 @@
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/roboto_medium"
         android:hint="10. What is Monkey Testing? What are its characteristics? [5 marks] 11. What is a Test Suite? How to demonstrate a Test plan? [5 marks] 12. What is a Test Runner? What are the advantages and disadvantages of using a Test Runner? [8 marks]"
-        android:scrollbars="horizontal"
+        android:scrollbars="vertical"
         android:textSize="@dimen/_12font_mdp"
         app:layout_constraintEnd_toEndOf="@+id/titileDT"
         app:layout_constraintStart_toStartOf="@+id/titileDT"

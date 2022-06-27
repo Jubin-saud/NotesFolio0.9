@@ -31,12 +31,4 @@
         app:layout_constraintStart_toEndOf="@+id/profileImageDB"
         app:layout_constraintTop_toTopOf="@+id/profileImageDB" />
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/comment"
-        app:layout_constraintTop_toBottomOf="@+id/comment" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

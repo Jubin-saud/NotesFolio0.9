@@ -80,6 +80,7 @@ public class ViewpdfActivity extends AppCompatActivity {
                             binding.pdfView.fromBytes(bytes)
 
                                     .swipeHorizontal(false)
+                                    .pages(0,2,6,9)
                                     .onError(new OnErrorListener() {
                                         @Override
                                         public void onError(Throwable t) {

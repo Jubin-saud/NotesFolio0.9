@@ -2,7 +2,6 @@ package com.saharia.notesell.model;
 
 public class Comment {
     private String CommentBody;
-
     private long commentTime;
     private String commentedBY;
 

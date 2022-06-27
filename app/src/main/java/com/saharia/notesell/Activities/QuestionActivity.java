@@ -144,7 +144,7 @@ public class QuestionActivity extends AppCompatActivity {
                                                  public void onSuccess(Void unused) {
 
                                                      Toast.makeText(getApplicationContext(), "Posted Sucessfully", Toast.LENGTH_SHORT).show();
-                                                     Intent intent = new Intent(QuestionActivity.this, TrendingFragment.class);
+                                                     Intent intent = new Intent(QuestionActivity.this, HomeActivity.class);
                                                      startActivity( intent);
                                                  }
                                              });

@@ -1,5 +1,6 @@
 package com.saharia.notesell;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -58,6 +59,7 @@ public class Qadapter extends RecyclerView.Adapter<Qadapter.viewHolder> {
 
         FirebaseDatabase.getInstance().getReference().child("users")
                 .child(qmodel.getQpostedBy()).addValueEventListener(new ValueEventListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user= dataSnapshot.getValue(User.class);
@@ -117,7 +119,7 @@ public class Qadapter extends RecyclerView.Adapter<Qadapter.viewHolder> {
 
                                }
                            });
-                           holder.binding.save.setVisibility(View.INVISIBLE);
+
                        }
                     }
 

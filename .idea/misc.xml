@@ -44,12 +44,17 @@
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/drawable-v24/usernew.xml" value="0.1965" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/drawable/btnshp.xml" value="0.1965" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1965" />
+        <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/drawable/right_round_bg.xml" value="0.1965" />
+        <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_comment.xml" value="0.21666666666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_detail.xml" value="0.23229166666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_document.xml" value="0.23229166666666667" />
+        <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_goto_library.xml" value="0.21666666666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_login.xml" value="0.21666666666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_payment.xml" value="0.23229166666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_question.xml" value="0.23229166666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/activity_updateprofile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/comment_sample.xml" value="0.264" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/dashbord.xml" value="0.23229166666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/fragment_add.xml" value="0.23229166666666667" />
         <entry key="..\:/Foliosell-master/Foliosell-master/app/src/main/res/layout/fragment_home.xml" value="0.23229166666666667" />
