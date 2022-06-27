@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/offwhite"
+
     tools:context=".Activities.LoginActivity">
 
     <TextView
@@ -86,7 +86,7 @@
         android:backgroundTint="@color/myblue"
         android:text="Login"
         android:textColor="#F1EDED"
-        android:textSize="@dimen/_15font_mdp"
+        android:textSize="@dimen/_13font_mdp"
         app:iconTint="@color/myblue"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout"

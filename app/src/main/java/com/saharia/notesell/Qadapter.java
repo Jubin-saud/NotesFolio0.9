@@ -64,7 +64,7 @@ public class Qadapter extends RecyclerView.Adapter<Qadapter.viewHolder> {
                 Picasso.get()
                         .load(user.getProfileImage())
                         .placeholder(R.drawable.profile)
-                        .resize(300, 300)
+                        .resize(200, 200)
                         .error(R.drawable.leaf)
                         .into(holder.binding.profileImageDB);
                 holder.binding.usernameDB.setText(user.getName());

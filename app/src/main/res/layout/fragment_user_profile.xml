@@ -22,7 +22,7 @@
         android:id="@+id/namePro"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -43,17 +43,29 @@
         app:layout_constraintStart_toStartOf="@+id/namePro"
         app:layout_constraintTop_toBottomOf="@+id/namePro" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Your Uploads"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl1" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec"
-        android:layout_width="409dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="502dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rl1"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
         tools:listitem="@layout/row_xml" />
 
     <RelativeLayout
@@ -83,20 +95,18 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/librarybtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:background="@color/myblue"
-        android:text="Library"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/pro"
+    <ImageView
+        android:id="@+id/library_image4"
+        android:layout_width="@dimen/_45mdp"
+        android:layout_height="@dimen/_45mdp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/locationPro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/pro"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/namePro"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/library" />
 
-<!--    <TextView-->
+    <!--    <TextView-->
 <!--        android:id="@+id/verifyemailtext"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->

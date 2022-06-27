@@ -3,6 +3,7 @@ package com.saharia.notesell.Activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,17 +20,27 @@ import com.saharia.notesell.databinding.ActivityLoginBinding;
 public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
     ActivityLoginBinding binding;
+
+    private ProgressDialog pd2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        pd2=new ProgressDialog(this);
+        pd2.setTitle("Loging into your account");
+        pd2.setCanceledOnTouchOutside(false);
+
         auth= FirebaseAuth.getInstance();
 
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                pd2.setMessage("Please wait");
+                pd2.show();
                 String email=binding.email.getText().toString();
                 String password=binding.password.getText().toString();
 
@@ -38,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-
+                                  pd2.dismiss();
                                 Toast.makeText(LoginActivity.this, " Login Successful! ", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(intent);

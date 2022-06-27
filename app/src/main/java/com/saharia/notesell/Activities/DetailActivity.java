@@ -114,8 +114,8 @@ public class DetailActivity extends AppCompatActivity {
                   String viewscount="" +dataSnapshot.child("viewsCount").getValue();
                       binding.titileDT.setText(title);
                       binding.desDT.setText(description);
-                      binding.price.setText(price);
-               binding.viewsTv.setText(viewscount);
+                      binding.price.setText("Rs " +price);
+               binding.viewsTv.setText(viewscount + " views");
 
                         Picasso.get()
                                 .load(url)

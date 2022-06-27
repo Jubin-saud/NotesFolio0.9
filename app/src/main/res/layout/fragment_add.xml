@@ -38,6 +38,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/titileEt"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,11 +68,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
-        android:background="@color/myblue"
         android:layout_marginBottom="37dp"
         android:text="Next"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:background="@drawable/btnshp"
+        android:textColor="@color/offwhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -81,9 +82,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="28dp"
         android:text=" Thumbnail"
-        android:background="@color/myblue"
+
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
+        android:background="@drawable/btnshp"
+        android:textColor="@color/offwhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"

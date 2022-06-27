@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     FirebaseStorage storage;
     Uri selectedItem;
-    ProgressDialog dialog;
+    private ProgressDialog pd1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        pd1=new ProgressDialog(this);
+        pd1.setTitle("Creating Account");
+        pd1.setCanceledOnTouchOutside(false);
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -68,10 +71,15 @@ public class MainActivity extends AppCompatActivity {
         binding.registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nameTxt = binding.name.getText().toString();
+
+                pd1.setMessage("Please wait");
+                pd1.show();
+
+                String nameTxt = binding.name.getText().toString().trim();
                 String emailTxt = binding.email.getText().toString();
                 String passTxt = binding.password.getText().toString();
                 String locationTxt = binding.location.getText().toString();
+                locationTxt.replace(" ","");
                 //  dialog.show();
                 if (!nameTxt.isEmpty() && !emailTxt.isEmpty() && !passTxt.isEmpty()) {
 
@@ -79,27 +87,6 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-
-
-                                //verify email
-
-//                                FirebaseUser firebaseUser = auth.getCurrentUser();
-//                                firebaseUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-//                                    @Override
-//                                    public void onSuccess(Void unused) {
-//                                        Toast.makeText(MainActivity.this, "Email verification sent", Toast.LENGTH_SHORT).show();
-//
-//                                    }
-//                                }).addOnFailureListener(new OnFailureListener() {
-//                                    @Override
-//                                    public void onFailure(@NonNull Exception e) {
-//                                        Log.d(TAG,"onFailure :Email not sent" +e.getMessage());
-//                                        Toast.makeText(MainActivity.this, "could not send Email verification", Toast.LENGTH_SHORT).show();
-//                                    }
-//                                });
-
-                                //verification end
-
 
                                 Toast.makeText(MainActivity.this, "Account created successfully", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
@@ -123,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             if (task.isSuccessful()){
 
+
                                 reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                     @Override
                                     public void onSuccess(Uri uri) {
@@ -139,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
                                                     public void onSuccess(Void unused) {
-                                                        //  dialog.dismiss();
+                                                        pd1.dismiss();
                                                         Intent intent= new Intent(MainActivity.this,HomeActivity.class);
                                                         startActivity(intent);
                                                         finish();

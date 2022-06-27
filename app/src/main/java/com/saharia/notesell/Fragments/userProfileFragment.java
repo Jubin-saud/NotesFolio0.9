@@ -58,7 +58,8 @@ public class userProfileFragment extends Fragment {
 
    // DatabaseReference databaseReference;
     FirebaseAuth auth;
-    Button library;
+    //Button library;
+    ImageView libarayImage;
 
     public userProfileFragment() {
         // Required empty public constructor
@@ -86,7 +87,8 @@ public class userProfileFragment extends Fragment {
         // PostAdapter postAdapter = new PostAdapter();
         itemrcv=view.findViewById(R.id.rec);
         search=view.findViewById(R.id.searchEt);
-        library=view.findViewById(R.id.librarybtn);
+       // library=view.findViewById(R.id.librarybtn);
+        libarayImage=view.findViewById(R.id.library_image4);
 //        TextView verifymailtext=view.findViewById(R.id.verifyemailtext);
 //        Button verifymailbutton=view.findViewById(R.id.verifyemailbotton);
         ImageView profile=view.findViewById(R.id.pro);
@@ -94,7 +96,7 @@ public class userProfileFragment extends Fragment {
         TextView loaction=view.findViewById(R.id.locationPro);
 
 
-        library.setOnClickListener(new View.OnClickListener() {
+        libarayImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), GotoLibraryActivity.class);
